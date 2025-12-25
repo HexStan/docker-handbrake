@@ -18,7 +18,7 @@ ARG INTEL_ONEVPL_GPU_RUNTIME_VERSION=25.3.4
 ARG CPU_FEATURES_VERSION=0.10.1
 
 # Define software download URLs.
-ARG HANDBRAKE_URL=https://github.com/HexStan/HandBrake/archive/refs/tags/${HANDBRAKE_VERSION}.tar.gz
+ARG HANDBRAKE_URL=https://github.com/HexStan/HandBrake.git
 ARG LIBVA_URL=https://github.com/intel/libva/releases/download/${LIBVA_VERSION}/libva-${LIBVA_VERSION}.tar.bz2
 ARG INTEL_VAAPI_DRIVER_URL=https://github.com/intel/intel-vaapi-driver/releases/download/${INTEL_VAAPI_DRIVER_VERSION}/intel-vaapi-driver-${INTEL_VAAPI_DRIVER_VERSION}.tar.bz2
 ARG GMMLIB_URL=https://github.com/intel/gmmlib/archive/intel-gmmlib-${GMMLIB_VERSION}.tar.gz

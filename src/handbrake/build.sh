@@ -268,15 +268,8 @@ if [ "$(xx-info arch)" = "amd64" ]; then
 fi
 
 log "Downloading HandBrake sources..."
-if echo "${HANDBRAKE_URL}" | grep -q '\.git$'; then
-    # Sources from git for nightly builds.
-    git clone ${HANDBRAKE_URL} /tmp/handbrake
-    # HANDBRAKE_VERSION is in the format "nightly-<date>-<commit hash>".
-    git -C /tmp/handbrake checkout "$(echo "${HANDBRAKE_VERSION}" | cut -d'-' -f3)"
-else
-    mkdir /tmp/handbrake
-    curl -# -L -f ${HANDBRAKE_URL} | tar xz --strip 1 -C /tmp/handbrake
-fi
+rm -rf /tmp/handbrake
+git clone --depth 1 --branch "${HANDBRAKE_VERSION}" "${HANDBRAKE_URL}" /tmp/handbrake
 
 #
 # Compile HandBrake.
