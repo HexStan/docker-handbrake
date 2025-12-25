@@ -311,7 +311,7 @@ app:
           docker run [OPTIONS...] jlesage/{{ app.name }}:nightly-latest
           ```
 
-          [Git repository]: https://github.com/HandBrake/HandBrake
+          [Git repository]: https://github.com/HexStan/HandBrake
           [Docker Hub]: https://hub.docker.com/r/jlesage/{{ app.name }}/tags/
       - title: Debug Builds
         level: 2

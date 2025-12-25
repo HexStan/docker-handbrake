@@ -275,7 +275,7 @@ if echo "${HANDBRAKE_URL}" | grep -q '\.git$'; then
     git -C /tmp/handbrake checkout "$(echo "${HANDBRAKE_VERSION}" | cut -d'-' -f3)"
 else
     mkdir /tmp/handbrake
-    curl -# -L -f ${HANDBRAKE_URL} | tar xj --strip 1 -C /tmp/handbrake
+    curl -# -L -f ${HANDBRAKE_URL} | tar xz --strip 1 -C /tmp/handbrake
 fi
 
 #
@@ -479,7 +479,7 @@ fi
 log "Configuring HandBrake..."
 (
     if [ "$(xx-info arch)" = "amd64" ]; then
-        CONF_FLAGS="--enable-qsv --enable-vce"
+        CONF_FLAGS="--enable-qsv --enable-vce --enable-vaapi"
     else
         CONF_FLAGS="--disable-qsv --disable-nvenc"
     fi

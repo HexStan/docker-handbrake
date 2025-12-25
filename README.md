@@ -1072,7 +1072,7 @@ creation, e.g.:
 docker run [OPTIONS...] jlesage/handbrake:nightly-latest
 ```
 
-[Git repository]: https://github.com/HandBrake/HandBrake
+[Git repository]: https://github.com/HexStan/HandBrake
 [Docker Hub]: https://hub.docker.com/r/jlesage/handbrake/tags/
 
 ## Debug Builds
