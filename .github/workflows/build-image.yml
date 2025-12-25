@@ -46,7 +46,7 @@ jobs:
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
           
           # 拼接最终的 Tag
-          TAGS="${IMAGE_ID}:${DATE_TAG}"
+          TAGS="${IMAGE_ID}:${DATE_TAG}",${IMAGE_ID}:latest"
           
           # 输出结果以便后续步骤使用
           echo "version=${DATE_TAG}" >> $GITHUB_OUTPUT
