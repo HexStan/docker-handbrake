@@ -120,7 +120,9 @@ RUN \
         coreutils \
         findutils \
         expect \
-        xdpyinfo
+        xdpyinfo \
+        mesa-va-gallium \
+        libva-utils
 
 #        && \
 #    # Save some space by removing unused DRI drivers.
